@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mille | Charles Leclerc F1 Edition</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">MILLE</span>
+                <span class="logo-sub">#16 Leclerc Edition</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#studio">Estudio F1</a></li>
+                <li><a href="#filters">Filtros</a></li>
+                <li><a href="#carrusel">Galería</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#studio" class="btn-gold-outline">¡Probar Ya!</a>
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-flag-checkered"></i> Temporada Oficial F1
+            </div>
+            <h1>Vive la Velocidad con <span>Charles Leclerc</span></h1>
+            <p>Transforma tus fotos con el estilo exclusivo de Milled. Filtros ambientales, efectos de carreras, belleza Scuderia y diversión al estilo del 16.</p>
+            <div class="hero-buttons">
+                <a href="#studio" class="btn-gold">Entrar al Estudio <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#carrusel" class="btn-dark">Ver Ejemplos</a>
+            </div>
+        </div>
+        <div class="hero-graphic">
+            <div class="leclerc-number">16</div>
+        </div>
+    </section>
+
+    <!-- STUDIO SECTION (EDITOR DE FOTOS & FILTROS) -->
+    <section id="studio" class="studio-section">
+        <div class="section-header">
+            <h2>Estudio de Edición <span>Mille</span></h2>
+            <p>Sube tu foto y aplica los filtros oficiales de la Scuderia y Charles Leclerc</p>
+        </div>
+
+        <div class="studio-container">
+            <!-- PANEL DE CONTROL / FILTROS -->
+            <div class="control-panel">
+                <div class="upload-box">
+                    <label for="imageUpload" class="upload-label">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Cargar Imagen</span>
+                        <small>Formatos: JPG, PNG</small>
+                    </label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+
+                <!-- CATEGORÍAS DE FILTROS -->
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-tab="color">Color</button>
+                    <button class="tab-btn" data-tab="ambient">Ambiental</button>
+                    <button class="tab-btn" data-tab="beauty">Belleza</button>
+                    <button class="tab-btn" data-tab="games">Juegos F1</button>
+                    <button class="tab-btn" data-tab="funny">Risa</button>
+                    <button class="tab-btn" data-tab="eyes">Ojos</button>
+                </div>
+
+                <!-- CONTENIDO DE LAS PESTAÑAS -->
+                <div class="tab-content-container">
+                    <!-- Color -->
+                    <div class="filter-group active" id="group-color">
+                        <h3>Filtros de Color</h3>
+                        <div class="filter-grid">
+                            <button class="filter-btn" data-filter="normal">Normal</button>
+                            <button class="filter-btn" data-filter="monaco">Mónaco GP (B&W)</button>
+                            <button class="filter-btn" data-filter="ferrari-red">Rojo Ferrari #16</button>
+                            <button class="filter-btn" data-filter="sepia">Vintage Gold</button>
+                        </div>
+                    </div>
+
+                    <!-- Ambiental -->
+                    <div class="filter-group" id="group-ambient">
+                        <h3>Filtros Ambientales</h3>
+                        <div class="filter-grid">
+                            <button class="filter-btn" data-filter="paddock">Paddock Sunset</button>
+                            <button class="filter-btn" data-filter="night-race">Carrera Nocturna</button>
+                            <button class="filter-btn" data-filter="podium">Champagne Podium</button>
+                        </div>
+                    </div>
+
+                    <!-- Belleza -->
+                    <div class="filter-group" id="group-beauty">
+                        <h3>Belleza Scuderia</h3>
+                        <div class="filter-grid">
+                            <button class="filter-btn" data-filter="glow">Glow Piloto</button>
+                            <button class="filter-btn" data-filter="smooth">Piel de Porz</button>
+                            <button class="filter-btn" data-filter="contrast">HD Contraste</button>
+                        </div>
+                    </div>
+
+                    <!-- Juegos -->
+                    <div class="filter-group" id="group-games">
+                        <h3>Efectos Juegos F1</h3>
+                        <div class="filter-grid">
+                            <button class="filter-btn" data-filter="pixel">Retro Arcade F1</button>
+                            <button class="filter-btn" data-filter="hud">HUD Telemetría</button>
+                            <button class="filter-btn" data-filter="glitch">Glitch DRS</button>
+                        </div>
+                    </div>
+
+                    <!-- De Risa -->
+                    <div class="filter-group" id="group-funny">
+                        <h3>Efectos de Risa</h3>
+                        <div class="filter-grid">
+                            <button class="filter-btn" data-filter="cartoon">Caricatura Box</button>
+                            <button class="filter-btn" data-filter="distortion">Ojo de Pez (Curva)</button>
+                            <button class="filter-btn" data-filter="neon-funny">Neón Payaso</button>
+                        </div>
+                    </div>
+
+                    <!-- Ojos -->
+                    <div class="filter-group" id="group-eyes">
+                        <h3>Colores de Ojos</h3>
+                        <div class="filter-grid">
+                            <button class="filter-btn" data-filter="eye-gold">Oro Mónaco</button>
+                            <button class="filter-btn" data-filter="eye-ferrari">Rojo Pasión</button>
+                            <button class="filter-btn" data-filter="eye-blue">Azul Océano</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACCIONES DE GUARDADO -->
+                <div class="action-buttons">
+                    <button id="saveBtn" class="btn-gold"><i class="fa-solid fa-bookmark"></i> Guardar Imagen</button>
+                    <button id="downloadBtn" class="btn-dark"><i class="fa-solid fa-download"></i> Descargar</button>
+                </div>
+            </div>
+
+            <!-- PREVIEW DE LA IMAGEN -->
+            <div class="preview-panel">
+                <div class="canvas-wrapper">
+                    <canvas id="imageCanvas"></canvas>
+                    <div id="placeholderText" class="placeholder-text">
+                        <i class="fa-solid fa-image"></i>
+                        <p>Carga una imagen para comenzar la experiencia Mille</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARRUSEL DE EJEMPLOS -->
+    <section id="carrusel" class="carousel-section">
+        <div class="section-header">
+            <h2>Galería de Ejemplos <span>Mille</span></h2>
+            <p>Mira cómo transforman sus fotos los estudiantes de 3er año</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1508020282125-ac1a155a29df?auto=format&fit=crop&w=600&q=80" alt="Ejemplo 1">
+                        <div class="slide-caption">Estilo: Rojo Ferrari #16</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Ejemplo 2">
+                        <div class="slide-caption">Estilo: Paddock Sunset</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80" alt="Ejemplo 3">
+                        <div class="slide-caption">Estilo: HUD Telemetría F1</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Ejemplo 4">
+                        <div class="slide-caption">Estilo: Mónaco GP (B&W)</div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Listo para correr hacia la cima?</h2>
+            <p>Crea tu perfil con el número 16 y comparte tu pasión por Charles Leclerc con toda la clase.</p>
+            <a href="#studio" class="btn-gold">Comenzar Ahora Mismo</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>MILLE</h3>
+                <p>Plataforma interactiva diseñada especialmente para estudiantes de 3er año de Media General. Edición inspirada en Charles Leclerc y la Fórmula 1.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#studio">Estudio F1</a></li>
+                    <li><a href="#carrusel">Galería</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto Educativo</h4>
+                <p><i class="fa-solid fa-envelope"></i> contacto@mille-f1.edu</p>
+                <p><i class="fa-solid fa-location-dot"></i> Caracas, Venezuela</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MILLE - Todos los derechos reservados. Tributo a Charles Leclerc #16.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
